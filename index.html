@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Caliope </title>
+  <style>
+    :root {
+      --primary: #e67e22; /* naranja tierra */
+      --background: #fffaf5;
+      --text: #4e342e;
+      --accent: #d35400;
+      --neutral: #faf0e6;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--neutral);
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .productos h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .producto {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .producto h3 {
+      margin: 0.5rem 0;
+    }
+
+    .producto p {
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    button {
+      background-color: var(--primary);
+      border: none;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--accent);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: hsl(61, 100%, 82%);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header> <h1>Caliope</h1>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="Caliope">
+
+    
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Catálogo</a>
+      <a href="#">Ofertas</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="productos">
+      <h2>Nuestros Productos</h2>
+      <div class="grid">
+        <div class="producto">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbbT_iftyAXyC9fwJOic7PwehB0foifTUPVOZiglm0HKvH8gIrPk5vpXM_jKlncsPz5g4&usqp=CAU" alt="Gorro" />
+          <h3>Gorro</h3>
+          <p>RD$ 800</p>
+          <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04_rtTN68yo_qZGmz4dbSMSA0R9KGIUTQpBtn5F2eIXti7i3BsomntNexrgs2lo7tqak&usqp=CAU" alt="Bolso" />
+          <h3>Bolso</h3>
+          <p>RD$ 1,200</p>
+          <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYpbEL-GGApN0kkD1nKj82EPdhFr6wZTddxw&s" alt="Top" />
+          <h3>Top</h3>
+          <p>RD$ 1,500</p>
+          <button>Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Caliope Studio | Julio Vargas & Carlos L. Fernandez</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll("button").forEach(boton => {
+      boton.addEventListener("click", () => {
+        alert("Producto añadido al carrito 🛒");
+      });
+    });
+  </script>
+</body>
+</html>
